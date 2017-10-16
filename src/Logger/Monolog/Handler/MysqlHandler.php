@@ -26,6 +26,7 @@ class MysqlHandler extends AbstractProcessingHandler
             'instance'    => gethostname(),
             'message'     => $record['message'],
             'channel'     => $record['channel'],
+            'githash'     => config('app.githash'),
             'level'       => $record['level'],
             'level_name'  => $record['level_name'],
             'context'     => json_encode($record['context']),
